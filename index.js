@@ -1,4 +1,4 @@
-const SemVer = (() => {
+const SemVersion = (() => {
   let version = {
     major: 0,
     minor: 0,
@@ -7,7 +7,7 @@ const SemVer = (() => {
     meta: undefined,
   }
 
-  const isSemVer = v =>
+  const isSemVersion = v =>
     v &&
     v.hasOwnProperty('major') &&
     typeof v.major === 'number' &&
@@ -17,7 +17,7 @@ const SemVer = (() => {
     typeof v.patch === 'number'
 
   const parse = v => {
-    if (isSemVer(v)) return v
+    if (isSemVersion(v)) return v
 
     const [nonMeta, meta] = v.split('+', 2)
     const [nonPre, pre] = nonMeta.split('-', 2)
@@ -76,7 +76,7 @@ const SemVer = (() => {
   }
 
   return {
-    isSemVer,
+    isSemVersion,
     parse,
     from,
     get,
@@ -90,4 +90,4 @@ const SemVer = (() => {
   }
 })()
 
-module.exports = SemVer
+module.exports = SemVersion

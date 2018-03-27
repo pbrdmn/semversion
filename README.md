@@ -1,6 +1,6 @@
-# sem-ver
+# SemVersion
 
-Methods to parse and compare SemVer versions
+Methods to parse and compare SemVer (major.minor.patch) versions
 
 ## Test
 
@@ -11,10 +11,10 @@ yarn test
 ## Usage
 
 ```
-const SemVer = require('sem-ver')
+const SemVersion = require('semversion')
 
-SemVer.from('1.2.3')
-if (SemVer.gt('1.5') && SemVer.lt('2')) {
+SemVersion.from('1.2.3')
+if (SemVersion.gt('1.5') && SemVersion.lt('2')) {
 ...
 }
 ```

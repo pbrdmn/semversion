@@ -1,5 +1,5 @@
 {
-  "name": "sem-ver",
+  "name": "semversion",
   "version": "1.0.0",
   "description": "Methods to parse and compare SemVer versions",
   "main": "index.js",
