@@ -2,6 +2,14 @@
 
 Methods to parse and compare SemVer (major.minor.patch) versions
 
+[![Build Status](https://travis-ci.org/dustykeyboard/semversion.svg?branch=master)](https://travis-ci.org/dustykeyboard/semversion)
+
+## Installation
+
+```
+yarn add semversion
+```
+
 ## Test
 
 ```
