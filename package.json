@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "https://github.com/dustykeyboard/sem-ver",
   "author": "Philip Boardman <dustykeyboard@brd.mn>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
 }
