@@ -1,0 +1,9 @@
+{
+  "name": "sem-ver",
+  "version": "1.0.0",
+  "description": "SemVer methods",
+  "main": "index.js",
+  "repository": "https://github.com/dustykeyboard/sem-ver",
+  "author": "Philip Boardman <dustykeyboard@brd.mn>",
+  "license": "MIT"
+}
