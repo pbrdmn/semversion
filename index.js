@@ -35,11 +35,44 @@ const SemVer = (() => {
 
   const get = () => version
 
-  const toString = () => {
-    let string = [version.major, version.minor, version.patch].join('.')
-    if (version.pre) string += `-${version.pre}`
-    if (version.meta) string += `+${version.meta}`
+  const toString = (v = version) => {
+    let string = [v.major, v.minor, v.patch].join('.')
+    if (v.pre) string += `-${v.pre}`
+    if (v.meta) string += `+${v.meta}`
     return string
+  }
+
+  const cmp = (a, b) => {
+    if (a.major == b.major && a.minor == b.minor && a.patch == b.patch) {
+      if (typeof a.pre == 'undefined' && typeof b.pre == 'undefined') {
+        return 0
+      }
+
+      if (typeof a.pre == 'undefined' || typeof b.pre == 'undefined') {
+        if (typeof a.pre !== 'undefined') return 1
+        if (typeof b.pre !== 'undefined') return -1
+      }  
+
+      if (a.pre == b.pre) return 0
+
+      return a.pre > b.pre ? 1 : -1
+    }
+
+    if (
+      a.major > b.major ||
+      (a.major == b.major && a.minor > b.minor) ||
+      (a.major == b.major && a.minor === b.minor && a.patch > b.patch)
+    )
+      return 1
+
+    if (
+      a.major < b.major ||
+      (a.major == b.major && a.minor < b.minor) ||
+      (a.major == b.major && a.minor === b.minor && a.patch < b.patch)
+    )
+      return -1
+
+    return 0
   }
 
   return {
@@ -48,6 +81,12 @@ const SemVer = (() => {
     from,
     get,
     toString,
+    cmp: (a, b) => cmp(parse(a), parse(b)),
+    eq: v => cmp(version, parse(v)) === 0,
+    gt: v => cmp(version, parse(v)) > 0,
+    ge: v => cmp(version, parse(v)) >= 0,
+    lt: v => cmp(version, parse(v)) < 0,
+    le: v => cmp(version, parse(v)) <= 0,
   }
 })()
 
