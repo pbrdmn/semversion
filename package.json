@@ -1,7 +1,7 @@
 {
   "name": "semversion",
   "version": "1.0.0",
-  "description": "Methods to parse and compare SemVer versions",
+  "description": "Methods to parse and compare SemVer (major.minor.patch) versions",
   "main": "index.js",
   "repository": "https://github.com/dustykeyboard/sem-ver",
   "author": "Philip Boardman <dustykeyboard@brd.mn>",
