@@ -7,13 +7,13 @@ Methods to parse and compare SemVer (major.minor.patch) versions
 ## Installation
 
 ```
-yarn add semversion
+npm install semversion
 ```
 
 ## Test
 
 ```
-yarn test
+npm run test
 ```
 
 ## Usage

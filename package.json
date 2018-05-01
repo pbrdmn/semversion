@@ -1,6 +1,6 @@
 {
   "name": "semversion",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Methods to parse and compare SemVer (major.minor.patch) versions",
   "main": "index.js",
   "repository": "https://github.com/dustykeyboard/sem-ver",
@@ -11,5 +11,6 @@
   },
   "devDependencies": {
     "jest": "^22.4.3"
-  }
+  },
+  "dependencies": {}
 }
